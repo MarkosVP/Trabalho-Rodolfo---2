@@ -4,8 +4,9 @@ public class PrincipalCabine
 {
 	public static void main(String[] args)
 	{
-		int op = 999, a=0;
+		int op = 999, a=0, cb=0;
 		Veiculo v[] = new Veiculo[100];
+		CabinePedagio cb[] = new Veiculo[10];
 		Scanner teclado = new Scanner(System.in);
 
 		while(op != 0)
@@ -107,7 +108,7 @@ public class PrincipalCabine
 						case 4: 
 								System.out.println("Insira a Tarifa da praca de pedagio: ");
 								float val = teclado.nextFloat();	teclado.nextLine();
-								a++;
+								cb++;
 								break;
 
 						case 5:
