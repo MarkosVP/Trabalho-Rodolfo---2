@@ -4,13 +4,13 @@ public class CabinePedagio
 
 	public void Passar(Veiculo a)
 	{
-		Total= eixos*Tarifa;
+		Total = a.getEixos()*Tarifa;
 		
 		if(a instanceof Moto)
-			Total*0,5;
+			Total*=0.5;
 		if(a instanceof Caminhao)
-			Total*2;
+			Total*=2;
 		
-		a.setSaldo		
+		a.setSaldo( Total );
 	}
 }
