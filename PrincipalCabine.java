@@ -4,9 +4,10 @@ public class PrincipalCabine
 {
 	public static void main(String[] args)
 	{
-		int op = 999, a=0, cb=0;
+		int op = 999, a=0, i=0;
 		Veiculo v[] = new Veiculo[100];
 		CabinePedagio vcb[] = new CabinePedagio[10];
+
 		Scanner teclado = new Scanner(System.in);
 
 		while(op != 0)
@@ -112,8 +113,13 @@ public class PrincipalCabine
 								cb++;
 								break;
 
-						case 5:
-
+						case 5: System.out.println("Veiculos cadastrados sao:");
+								for(i=0;i<a;i++){
+									System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
+									System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
+									System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
+									System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
+								}
 								break;
 								
 						case 6:
