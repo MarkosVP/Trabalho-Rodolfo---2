@@ -5,6 +5,14 @@ public class Veiculo
 	private String Placa, Modelo;
 	
 	
+	public Veiculo(int ex, String pl, String mdl)
+	{
+		Eixos= ex;
+		Placa= pl;
+		Modelo= mdl;		
+	}
+	
+	
 	///////////  SET  ////////////
 	
 	//Inserir Eixos
@@ -17,13 +25,11 @@ public class Veiculo
 	{
 		Saldo = sld;
 	}
-	
 	//Inserir Placa
 	public void setPlaca( String pl )
 	{
 		Placa = pl;
 	}
-
 	//Inserir Modelo
 	public void setModelo( String mdl )
 	{
