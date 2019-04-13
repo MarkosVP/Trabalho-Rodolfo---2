@@ -106,7 +106,7 @@ public class PrincipalCabine
 								a++;
 								break;
 
-						case 4: 
+						case 4: //Criar Cabine de Pedágio
 								System.out.println("Insira a Tarifa da praca de pedagio: ");
 								float val = teclado.nextFloat();	teclado.nextLine();
 								vcb[cb].setTarifa(val);
