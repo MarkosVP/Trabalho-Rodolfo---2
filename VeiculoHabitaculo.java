@@ -2,6 +2,15 @@ public class VeiculoHabitaculo extends Veiculo
 {
 	private int numPorta;
 	private boolean VidroEletrico, ArCondicionado;
+	
+	public VeiculoHabitaculo(int ex, String pl, String mdl, int npt, boolean vde, boolean acd)
+	{
+		super(ex, pl, mdl);
+		numPorta= npt;
+		VidroEletrico= vde;
+		ArCondicionado= acd;	
+	}
+	
 
 	//Inserindo Dados
 	//NumPorta
