@@ -23,6 +23,7 @@ public class PrincipalCabine
 			System.out.printf("Selecao: ");
 			op = teclado.nextInt();
 			teclado.nextLine();
+			System.out.printf("\n\n");
 			
 			switch(op)
 			{
@@ -50,6 +51,8 @@ public class PrincipalCabine
 
 								System.out.println("Insira o volume do porta malas: ");
 								float vpm= teclado.nextFloat(); teclado.nextLine();
+								System.out.printf("\n");
+
 								v[a]= new Automovel(ex, pl, mdl, npt, vde, acd, cvs, vpm);
 								a++;
 								break;
@@ -113,18 +116,25 @@ public class PrincipalCabine
 								break;
 
 						case 5: //Listar Veículos-------------------------------------------------------
-								System.out.println("Veiculos cadastrados sao:");
+								System.out.println("Veiculos cadastrados sao:\n");
 								for(i=0;i<a;i++)
 								{
-									System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
-									System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
-									System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
-									System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
+									System.out.printf("\nID: %d",(i+1));
+									System.out.printf("\nPlaca: %s",((Veiculo) v[i]).getPlaca());
+									System.out.printf("\nModelo: %s",((Veiculo) v[i]).getModelo());
+									System.out.printf("\nSaldo: %.2f",((Veiculo) v[i]).getSaldo());
+									System.out.printf("\nEixos: %d",((Veiculo) v[i]).getEixos());
+									System.out.printf("\n\n");
 								}
 								break;
 								
-						case 6:
-
+						case 6:	//Listar Praças do Pedágio
+								System.out.printf("Pracas de Pedagio Disponiveis:\n");
+								for(i=0;i<a;i++)
+								{
+									System.out.printf("\nID: %d",(i+1));
+									System.out.printf("\nTarifa: %.2f",vcb[i].getTarifa());
+								}
 								break;
 								
 						case 7:
