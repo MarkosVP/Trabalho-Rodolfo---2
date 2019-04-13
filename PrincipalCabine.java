@@ -4,10 +4,8 @@ public class PrincipalCabine
 {
 	public static void main(String[] args)
 	{
-		int op = 999, a=0, i=0;
+		int op = 999, a=0;
 		Veiculo v[] = new Veiculo[100];
-		CabinePedagio vcb[] = new CabinePedagio[10];
-
 		Scanner teclado = new Scanner(System.in);
 
 		while(op != 0)
@@ -16,8 +14,8 @@ public class PrincipalCabine
 			System.out.println("2. Criar Caminhao");
 			System.out.println("3. Criar Motocicleta");
 			System.out.println("4. Criar Cabine de Pedagio");
-			System.out.println("5. Listar Veiculos");
-			System.out.println("6. Listar Praça de Pedagio");
+			System.out.println("5. Listar Automoveis");
+			System.out.println("6. Listar Praca de Pedagio");
 			System.out.println("7. Passar Veiculo");
 			System.out.println("0. Sair\n");
 
@@ -27,100 +25,92 @@ public class PrincipalCabine
 			
 			switch(op)
 			{
-						case 1: //Criar Carro 	-----------------------------------------------------------------------------------------
-								System.out.println("Insira a quantidade de eixos: ");
+						case 1: System.out.println("Insira a quantidade de eixos: ");
 								int ex= teclado.nextInt(); teclado.nextLine();
-								v[a].setEixos(ex);
 								
 								System.out.println("Insira a Placa: ");
 								String pl= teclado.nextLine();
-								v[a].setPlaca(pl);
 								
 								System.out.println("Insira o Modelo: ");
 								String mdl= teclado.nextLine();
-								v[a].setModelo(mdl);
 								
 								System.out.println("Insira o numero de Portas: ");
 								int npt= teclado.nextInt(); teclado.nextLine();
-								((Automovel)v[a]).setNumPorta(npt);
 								
 								System.out.println("Vidro Eletrico?   Nao(0)  Sim(1): ");
-								boolean vde= teclado.nextBoolean(); teclado.nextLine();
-								((VeiculoHabitaculo)v[a]).setVidroEletrico(vde);
+								boolean vde= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("Ar-Condicionado?  Nao(0)  Sim(1): ");
-								boolean acd= teclado.nextBoolean(); teclado.nextLine();
-								((VeiculoHabitaculo)v[a]).setArCondicionado(acd);
+								boolean acd= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("Conversivel?  Nao(0)  Sim(1): ");
-								boolean cvs= teclado.nextBoolean(); teclado.nextLine();
-								((Automovel)v[a]).setConversivel(cvs);
+								boolean cvs= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("Insira o volume do porta malas: ");
 								float vpm= teclado.nextFloat(); teclado.nextLine();
-								((Automovel)v[a]).setVolPortaMala(vpm);
+								v[a]= new Automovel(ex, pl, mdl, npt, vde, acd, cvs, vpm);
 								a++;
 								break;
 
-						case 2: //Criar Caminhão	---------------------------------------------------------------------------------
-								System.out.println("Insira a quantidade de eixos: ");
+
+
+						case 2: System.out.println("Insira a quantidade de eixos: ");
 								ex= teclado.nextInt(); teclado.nextLine();
-								v[a].setEixos(ex);
 								
 								System.out.println("Insira a Placa: ");
 								pl= teclado.nextLine();
-								v[a].setPlaca(pl);
 								
 								System.out.println("Insira o Modelo: ");
 								mdl= teclado.nextLine();
-								v[a].setModelo(mdl);
 								
 								System.out.println("Insira o numero de Portas: ");
 								npt= teclado.nextInt(); teclado.nextLine();
-								((Automovel)v[a]).setNumPorta(npt);
 								
 								System.out.println("Vidro Eletrico?   Nao(0)  Sim(1): ");
-								vde= teclado.nextBoolean(); teclado.nextLine();
-								((VeiculoHabitaculo)v[a]).setVidroEletrico(vde);
+								vde= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("Ar-Condicionado?  Nao(0)  Sim(1): ");
-								acd= teclado.nextBoolean(); teclado.nextLine();
-								((VeiculoHabitaculo)v[a]).setArCondicionado(acd);
+								acd= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("A carga tem seguro?  Nao(0)  Sim(1): ");
-								boolean seg= teclado.nextBoolean(); teclado.nextLine();
-								((Caminhao)(v[a])).setSeguroCarga(seg);
+								boolean seg= teclado.hasNextBoolean(); teclado.nextLine();
 								
 								System.out.println("Insira o pesa da carga: ");
 								int pc= teclado.nextInt();  teclado.nextLine();
-								((Caminhao)(v[a])).setPesoCarga(pc);
+
+								v[a]= new Caminhao(ex, pl, mdl, npt, vde, acd, pc, seg);
 								a++;
 								break;
 
-						case 3: //Cara ta foda viu
-								System.out.println("Insira a quantidade de eixos: ");
+
+
+						case 3: System.out.println("Insira a quantidade de eixos: ");
+								ex= teclado.nextInt(); teclado.nextLine();
+								
 								System.out.println("Insira a Placa: ");
+								pl= teclado.nextLine();
+								
 								System.out.println("Insira o Modelo: ");
+								mdl= teclado.nextLine();
+								
 								System.out.println("Insira o modelo do guidao: ");
+								String mdlg= teclado.nextLine();
+								
 								System.out.println("Tem corta linha?  Nao(0)  Sim(1): ");
+								boolean ctln= teclado.hasNextBoolean(); teclado.nextLine();
+
+								v[a]= new Moto(ex, pl, mdl, mdlg, ctln);
 								a++;
 								break;
 
-						case 4: //Criar Cabine de Pedágio
-								System.out.println("Insira a Tarifa da praca de pedagio: ");
+
+
+						case 4: System.out.println("Insira a Tarifa da praca de pedagio: ");
 								float val = teclado.nextFloat();	teclado.nextLine();
-								vcb[cb].setTarifa(val);
-								cb++;
 								break;
 
-						case 5:  	//Listando veiculos
-									System.out.println("Veiculos cadastrados sao:");
-									for(i=0;i<a;i++){
-										System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
-										System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
-										System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
-										System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
-								}
+						case 5:
+
 								break;
 								
 						case 6:
