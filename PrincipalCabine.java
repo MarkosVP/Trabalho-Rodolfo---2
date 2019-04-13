@@ -113,13 +113,15 @@ public class PrincipalCabine
 								cb++;
 								break;
 
-						case 5: System.out.println("Veiculos cadastrados sao:");
-								for(i=0;i<a;i++){
-									System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
-									System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
-									System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
-									System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
+						case 5: //Listando veiculos
+									System.out.println("Veiculos cadastrados sao:");
+									for(i=0;i<a;i++){
+										System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
+										System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
+										System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
+										System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
 								}
+								
 								break;
 								
 						case 6:
@@ -133,3 +135,5 @@ public class PrincipalCabine
 		}
 	}
 }
+
+
