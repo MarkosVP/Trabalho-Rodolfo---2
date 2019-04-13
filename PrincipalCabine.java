@@ -119,7 +119,7 @@ public class PrincipalCabine
 								System.out.println("Veiculos cadastrados sao:\n");
 								for(i=0;i<a;i++)
 								{
-									System.out.printf("\nID: %d",(i+1));
+									System.out.printf("\nID: %d",i);
 									System.out.printf("\nPlaca: %s",((Veiculo) v[i]).getPlaca());
 									System.out.printf("\nModelo: %s",((Veiculo) v[i]).getModelo());
 									System.out.printf("\nSaldo: %.2f",((Veiculo) v[i]).getSaldo());
@@ -132,12 +132,12 @@ public class PrincipalCabine
 								System.out.printf("Pracas de Pedagio Disponiveis:\n");
 								for(i=0;i<a;i++)
 								{
-									System.out.printf("\nID: %d",(i+1));
+									System.out.printf("\nID: %d",i);
 									System.out.printf("\nTarifa: %.2f",vcb[i].getTarifa());
 								}
 								break;
 								
-						case 7:
+						case 7:	//Passar Veículos
 								System.out.printf("Insira o ID do veículo: ");
 								idV = teclado.nextInt();	teclado.nextLine();
 
