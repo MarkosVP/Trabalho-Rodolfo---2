@@ -97,7 +97,7 @@ public class PrincipalCabine
 								a++;
 								break;
 
-						case 3: //Cara ta foda viu
+						case 3: //Criar Moto
 								System.out.println("Insira a quantidade de eixos: ");
 								System.out.println("Insira a Placa: ");
 								System.out.println("Insira o Modelo: ");
