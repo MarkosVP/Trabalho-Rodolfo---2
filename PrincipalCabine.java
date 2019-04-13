@@ -4,6 +4,7 @@ public class PrincipalCabine
 {
 	public static void main(String[] args)
 	{
+		int op = 999, a=0;
 		Veiculo v[] = new Veiculo[100];
 		Scanner teclado = new Scanner(System.in);
 
@@ -24,8 +25,7 @@ public class PrincipalCabine
 			
 			switch(op)
 			{
-						case 1: //Criar Carro 	-----------------------------------------------------------------------------------------
-								System.out.println("Insira a quantidade de eixos: ");
+						case 1: System.out.println("Insira a quantidade de eixos: ");
 								int ex= teclado.nextInt(); teclado.nextLine();
 								
 								System.out.println("Insira a Placa: ");
@@ -52,8 +52,9 @@ public class PrincipalCabine
 								a++;
 								break;
 
-						case 2: //Criar Caminhão	---------------------------------------------------------------------------------
-								System.out.println("Insira a quantidade de eixos: ");
+
+
+						case 2: System.out.println("Insira a quantidade de eixos: ");
 								ex= teclado.nextInt(); teclado.nextLine();
 								
 								System.out.println("Insira a Placa: ");
@@ -76,12 +77,14 @@ public class PrincipalCabine
 								
 								System.out.println("Insira o pesa da carga: ");
 								int pc= teclado.nextInt();  teclado.nextLine();
+
 								v[a]= new Caminhao(ex, pl, mdl, npt, vde, acd, pc, seg);
 								a++;
 								break;
 
-						case 3: //Criar Moto
-								System.out.println("Insira a quantidade de eixos: ");
+
+
+						case 3: System.out.println("Insira a quantidade de eixos: ");
 								ex= teclado.nextInt(); teclado.nextLine();
 								
 								System.out.println("Insira a Placa: ");
@@ -100,21 +103,14 @@ public class PrincipalCabine
 								a++;
 								break;
 
-						case 4: //Criar Cabine de Pedágio
-								System.out.println("Insira a Tarifa da praca de pedagio: ");
+
+
+						case 4: System.out.println("Insira a Tarifa da praca de pedagio: ");
 								float val = teclado.nextFloat();	teclado.nextLine();
-								vcb[cb].setTarifa(val);
-								cb++;
 								break;
 
-						case 5: //Listar Veículos
-								System.out.println("Veiculos cadastrados sao:");
-								for(i=0;i<a;i++){
-									System.out.printf("\n%d",((Veiculo) v[i]).getEixos());
-									System.out.printf("\n%d",((Veiculo) v[i]).getSaldo());
-									System.out.printf("\n%d",((Veiculo) v[i]).getPlaca());
-									System.out.printf("\n%d",((Veiculo) v[i]).getModelo());
-								}
+						case 5:
+
 								break;
 								
 						case 6:
