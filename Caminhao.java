@@ -3,14 +3,6 @@ public class Caminhao extends VeiculoHabitaculo
 	private int PesoCarga;
 	private boolean SeguroCarga;
 
-	// Construtor //
-	public Caminhao(int ex, String pl, String mdl, int npt, boolean vde, boolean acd, int pc, boolean seg)
-	{
-		super(ex, pl, mdl, npt, vde, acd);
-		PesoCarga= pc;
-		SeguroCarga= seg;
-	}
-
 
 	/////////////  SET  //////////////
 	public void setPesoCarga( int pc )
