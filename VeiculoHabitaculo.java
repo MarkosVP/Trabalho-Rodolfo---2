@@ -3,9 +3,9 @@ public class VeiculoHabitaculo extends Veiculo
 	private int numPorta;
 	private boolean VidroEletrico, ArCondicionado;
 	
-	public VeiculoHabitaculo(int ex, String pl, String mdl, int npt, boolean vde, boolean acd)
+	public VeiculoHabitaculo(int ex, float sld, String pl, String mdl, int npt, boolean vde, boolean acd)
 	{
-		super(ex, pl, mdl);
+		super(ex, sld, pl, mdl);
 		numPorta= npt;
 		VidroEletrico= vde;
 		ArCondicionado= acd;	

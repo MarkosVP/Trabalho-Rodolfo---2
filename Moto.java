@@ -5,9 +5,9 @@ public class Moto extends Veiculo
 
 
 	// Construtor //
-	public Moto(int ex, String pl, String mdl, String mdlg, boolean ctln)
+	public Moto(int ex, float sld, String pl, String mdl, String mdlg, boolean ctln)
 	{
-		super(ex, pl, mdl);
+		super(ex, sld, pl, mdl);
 		ModeloGuidao= mdlg;
 		CortaLinha= ctln;		
 	}

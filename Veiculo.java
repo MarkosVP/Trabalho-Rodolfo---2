@@ -5,9 +5,10 @@ public class Veiculo
 	private String Placa, Modelo;
 	
 	
-	public Veiculo(int ex, String pl, String mdl)
+	public Veiculo(int ex, float sld, String pl, String mdl)
 	{
 		Eixos= ex;
+		Saldo= sld;
 		Placa= pl;
 		Modelo= mdl;		
 	}

@@ -30,6 +30,9 @@ public class PrincipalCabine
 						case 1: //Criar Carro-----------------------------------------------------------
 								System.out.println("Insira a quantidade de eixos: ");
 								int ex= teclado.nextInt(); teclado.nextLine();
+								
+								System.out.println("Insira o Saldo: ");
+								float sld= teclado.nextFloat(); teclado.nextLine();
 
 								System.out.println("Insira a Placa: ");
 								String pl= teclado.nextLine();
@@ -53,7 +56,7 @@ public class PrincipalCabine
 								float vpm= teclado.nextFloat(); teclado.nextLine();
 								System.out.printf("\n");
 
-								v[a]= new Automovel(ex, pl, mdl, npt, vde, acd, cvs, vpm);
+								v[a]= new Automovel(ex, sld, pl, mdl, npt, vde, acd, cvs, vpm);
 								a++;
 								break;
 
@@ -62,6 +65,9 @@ public class PrincipalCabine
 						case 2: //Criar Caminhão--------------------------------------------------------
 								System.out.println("Insira a quantidade de eixos: ");
 								ex= teclado.nextInt(); teclado.nextLine();
+								
+								System.out.println("Insira o Saldo: ");
+								sld= teclado.nextFloat(); teclado.nextLine();
 
 								System.out.println("Insira a Placa: ");
 								pl= teclado.nextLine();
@@ -84,13 +90,16 @@ public class PrincipalCabine
 								System.out.println("Insira o pesa da carga: ");
 								int pc= teclado.nextInt();  teclado.nextLine();
 
-								v[a]= new Caminhao(ex, pl, mdl, npt, vde, acd, pc, seg);
+								v[a]= new Caminhao(ex, sld, pl, mdl, npt, vde, acd, pc, seg);
 								a++;
 								break;
 
 						case 3: //Criar Moto------------------------------------------------------------
 								System.out.println("Insira a quantidade de eixos: ");
 								ex= teclado.nextInt(); teclado.nextLine();
+
+								System.out.println("Insira o Saldo: ");
+								sld= teclado.nextFloat(); teclado.nextLine();
 
 								System.out.println("Insira a Placa: ");
 								pl= teclado.nextLine();
@@ -104,14 +113,14 @@ public class PrincipalCabine
 								System.out.println("Tem corta linha?  Nao(0)  Sim(1): ");
 								boolean ctln= teclado.hasNextBoolean(); teclado.nextLine();
 
-								v[a]= new Moto(ex, pl, mdl, mdlg, ctln);
+								v[a]= new Moto(ex, sld, pl, mdl, mdlg, ctln);
 								a++;
 								break;
 
 						case 4: //Criar Cabine de Pedágio-----------------------------------------------
 								System.out.println("Insira a Tarifa da praca de pedagio: ");
-								float val = teclado.nextFloat();	teclado.nextLine();
-								vcb[cb].setTarifa(val);
+								float trf = teclado.nextFloat(); teclado.nextLine();
+								vcb[cb]= new CabinePedagio(trf);
 								cb++;
 								break;
 
@@ -130,21 +139,23 @@ public class PrincipalCabine
 								
 						case 6:	//Listar Praças do Pedágio
 								System.out.printf("Pracas de Pedagio Disponiveis:\n");
-								for(i=0;i<a;i++)
+								for(i=0;i<cb;i++)
 								{
 									System.out.printf("\nID: %d",i);
-									System.out.printf("\nTarifa: %.2f",vcb[i].getTarifa());
+									System.out.printf("\nTarifa: %.2f\n\n",vcb[i].getTarifa());
 								}
 								break;
 								
 						case 7:	//Passar Veículos
-								System.out.printf("Insira o ID do veículo: ");
+								System.out.printf("Insira o ID do veiculo: ");
 								idV = teclado.nextInt();	teclado.nextLine();
 
 								System.out.printf("Insira o ID da Praca de Pedagio: ");
 								idP = teclado.nextInt();	teclado.nextLine();
-
+								
 								vcb[idP].Passar( v[idV] );
+								System.out.printf("\nSaldo Atualizado: %.2f\n\n", v[idV].getSaldo());
+								
 								break;
 			}
 		}
