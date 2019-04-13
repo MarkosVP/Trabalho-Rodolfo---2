@@ -108,6 +108,7 @@ public class PrincipalCabine
 						case 4: 
 								System.out.println("Insira a Tarifa da praca de pedagio: ");
 								float val = teclado.nextFloat();	teclado.nextLine();
+								vcb[cb].setTarifa(val);
 								cb++;
 								break;
 

@@ -13,4 +13,16 @@ public class CabinePedagio
 		
 		a.setSaldo( Total );
 	}
+
+	//Inserindo Tarifa
+	public void setTarifa( float val )
+	{
+		Tarifa = val;
+	}
+
+	//Obtendo Tarifa
+	public float getTarifa()
+	{
+		return Tarifa;
+	}
 }
