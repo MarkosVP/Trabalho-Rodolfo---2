@@ -6,7 +6,7 @@ public class PrincipalCabine
 	{
 		int op = 999, a=0, cb=0;
 		Veiculo v[] = new Veiculo[100];
-		CabinePedagio cb[] = new Veiculo[10];
+		CabinePedagio vcb[] = new CabinePedagio[10];
 		Scanner teclado = new Scanner(System.in);
 
 		while(op != 0)
