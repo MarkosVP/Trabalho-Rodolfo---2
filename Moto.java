@@ -3,6 +3,16 @@ public class Moto extends Veiculo
 	private String ModeloGuidao;
 	private boolean CortaLinha;
 
+
+	// Construtor //
+	public Moto(int ex, String pl, String mdl, String mdlg, boolean ctln)
+	{
+		super(ex, pl, mdl);
+		ModeloGuidao= mdlg;
+		CortaLinha= ctln;		
+	}
+	
+
 	//Obtendo Dados
 	//ModeloGuidao
 	public void setModeloGuidao( String mdlg )
