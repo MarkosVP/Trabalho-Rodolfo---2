@@ -4,7 +4,7 @@ public class PrincipalCabine
 {
 	public static void main(String[] args)
 	{
-		int op = 999, a=0, i=0, cb=0;
+		int op=999, a=0, i=0, cb=0, idV, idP;
 		Veiculo v[] = new Veiculo[100];
 		CabinePedagio vcb[] = new CabinePedagio[10];
 		Scanner teclado = new Scanner(System.in);
@@ -138,7 +138,13 @@ public class PrincipalCabine
 								break;
 								
 						case 7:
+								System.out.printf("Insira o ID do veículo: ");
+								idV = teclado.nextInt();	teclado.nextLine();
 
+								System.out.printf("Insira o ID da Praca de Pedagio: ");
+								idP = teclado.nextInt();	teclado.nextLine();
+
+								vcb[idP].Passar( v[idV] );
 								break;
 			}
 		}
