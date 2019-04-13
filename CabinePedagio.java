@@ -1,7 +1,12 @@
 public class CabinePedagio
 {
 	private float Tarifa, Total=0, Lucro=0;
-
+	
+	public CabinePedagio(float trf)
+	{
+		Tarifa = trf;
+	}
+	
 	public void Passar(Veiculo a)
 	{
 		Total = a.getEixos()*Tarifa;

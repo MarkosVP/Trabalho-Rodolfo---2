@@ -4,9 +4,9 @@ public class Automovel extends VeiculoHabitaculo
 	private float VolPortaMala;
 	
 	// Construtor //
-	public Automovel(int ex, String pl, String mdl, int npt, boolean vde, boolean acd, boolean cvs, float vpm)
+	public Automovel(int ex, float sld, String pl, String mdl, int npt, boolean vde, boolean acd, boolean cvs, float vpm)
 	{
-		super(ex, pl, mdl, npt, vde, acd);
+		super(ex, sld, pl, mdl, npt, vde, acd);
 		Conversivel= cvs;
 		VolPortaMala= vpm;		
 	}

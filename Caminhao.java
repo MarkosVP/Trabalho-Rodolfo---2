@@ -4,9 +4,9 @@ public class Caminhao extends VeiculoHabitaculo
 	private boolean SeguroCarga;
 
 	// Construtor //
-	public Caminhao(int ex, String pl, String mdl, int npt, boolean vde, boolean acd, int pc, boolean seg)
+	public Caminhao(int ex, float sld, String pl, String mdl, int npt, boolean vde, boolean acd, int pc, boolean seg)
 	{
-		super(ex, pl, mdl, npt, vde, acd);
+		super(ex, sld, pl, mdl, npt, vde, acd);
 		PesoCarga= pc;
 		SeguroCarga= seg;
 	}
