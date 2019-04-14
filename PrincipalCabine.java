@@ -1,3 +1,8 @@
+//Programadores
+//Marcos Vinicius Souza Pinheiro - 580678
+//João Pedro Lourenção - 579610
+//Pedro Luis - 580473
+
 import java.util.Scanner;
 
 public class PrincipalCabine
