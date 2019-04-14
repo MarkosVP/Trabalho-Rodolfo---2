@@ -1,3 +1,8 @@
+//Programadores
+//Marcos Vinicius Souza Pinheiro - 580678
+//João Pedro Lourenção - 579610
+//Pedro Luis - 580473
+
 public class CabinePedagio
 {
 	private float Tarifa, Total=0, Lucro=0;
@@ -22,7 +27,7 @@ public class CabinePedagio
 			Lucro += Total;
 		}
 		
-		if( a.getSaldo() >= (a.getSaldo() - Total) )
+		if( (a.getSaldo() - Total) >= 0 )
 			a.setSaldo( (a.getSaldo() - Total) );
 		else
 			System.out.printf("Saldo Insuficiente!");
